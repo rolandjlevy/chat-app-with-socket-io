@@ -19,14 +19,7 @@
       <section>
         <input id="handle" type="text" class="field" placeholder="Handle" />
         <input id="message" type="text" class="field" placeholder="Message" />
-        <div id="emoji-container">
-          <!-- <button value="😀" class="btn emoji">😀</button>
-          <button value="😅" class="btn emoji">😅</button>
-          <button value="😉" class="btn emoji">😉</button>
-          <button value="😂" class="btn emoji">😂</button>
-          <button value="🤩" class="btn emoji">🤩</button>
-          <button value="😍" class="btn emoji">😍</button> -->
-        </div>
+        <select id="emoji-dropdown"></select>
         <button id="send" class="btn primary" disabled>Send</button>
       </section>
     </main>
@@ -37,6 +30,7 @@
   </article>
 
   <script src="/socket.io/socket.io.js"></script>
+  <script src="https://rawgit.com/theraot/emoji/master/emoji.js"></script>
   <script src="/script.js"></script>
 
 </body>

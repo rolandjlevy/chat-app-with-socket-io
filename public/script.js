@@ -29,11 +29,12 @@ socket.on('typing', (data) => {
 const buttonState = { handle: false, message: false }
 const buttonEnabled = () => Object.values(buttonState).every(n => Boolean(n));
 
-// emit data down the socket to the server
+// click send to emit data down the socket to the server
 $('#send').addEventListener('click', (e) => {
   sendMessage();
 });
 
+// press enter to emit data down the socket to the server
 $('#message').addEventListener('keyup', (e) => {
   if (e.key === 'Enter' && buttonEnabled()) {
     sendMessage();
@@ -44,28 +45,29 @@ $('#message').addEventListener('keyup', (e) => {
   $('#send').disabled = !buttonEnabled();
 });
 
+// validate send button
 $('#handle').addEventListener('keyup', (e) => {
   buttonState['handle'] = e.target.value.length;
   $('#send').disabled = !buttonEnabled();
 });
 
+// clear chat content
 $('#clear-chat').addEventListener('click', (e) => {
   console.log(e.target);
   $('#output').innerHTML = '';
   $('#feedback').innerHTML = '';
 });
 
-const emojis = ["😀", "😅", "😉", "😂", "🤩", "😍"];
+// generate emojis dropdown
+emoji.forEach(item => {
+  const option = document.createElement('option');
+  option.innerHTML = item;
+  $('#emoji-dropdown').appendChild(option);
+});
 
-emojis.forEach(emoji => {
-  const btn = document.createElement('btn');
-  btn.classList.add('btn', 'emoji');
-  btn.setAttribute('value', emoji);
-  btn.textContent = emoji;
-  btn.addEventListener('click', (e) => {
-    $('#message').value += emoji;
-    buttonState['message'] = e.currentTarget.value.length;
-    $('#send').disabled = !buttonEnabled();
-  });
-  $('#emoji-container').appendChild(btn);
+// add emoji to message on change
+$('#emoji-dropdown').addEventListener('change', (e) => {
+  $('#message').value += e.target.value;
+  buttonState['message'] = e.currentTarget.value.length;
+  $('#send').disabled = !buttonEnabled();
 });
