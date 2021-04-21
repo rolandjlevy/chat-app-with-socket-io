@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat app with socket.io</title>
+  <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <article id="wrapper">
+    <main id="chat-container">
+      <section id="chat-window">
+        <div id="output"></div>
+        <div id="feedback"></div>
+      </section>
+      <section>
+        <input id="handle" type="text" class="field" placeholder="Handle" />
+        <input id="message" type="text" class="field" placeholder="Message" />
+        <div id="emoji-container">
+          <!-- <button value="😀" class="btn emoji">😀</button>
+          <button value="😅" class="btn emoji">😅</button>
+          <button value="😉" class="btn emoji">😉</button>
+          <button value="😂" class="btn emoji">😂</button>
+          <button value="🤩" class="btn emoji">🤩</button>
+          <button value="😍" class="btn emoji">😍</button> -->
+        </div>
+        <button id="send" class="btn primary" disabled>Send</button>
+      </section>
+    </main>
+    <main id="admin-container">
+      <a href="/" target="_blank" class="btn secondary">New window</a>
+      <button id="clear-chat" class="btn secondary">Clear</a>
+    </main>
+  </article>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/script.js"></script>
+
+</body>
+</html>
