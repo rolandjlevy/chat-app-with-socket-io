@@ -5,33 +5,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chat app with socket.io</title>
-  <link href="styles.css" rel="stylesheet">
+  <link href="styles/style.css" rel="stylesheet">
+  <link href="styles/background.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Open+Sans&family=Roboto:wght@300;400;500;600;700&family=Signika:wght@300;400;500;600&family=Spartan:wght@300;400;500;600&family=Truculenta:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
 
   <article id="wrapper">
-    <main id="chat-container">
+    <header class="m-b-20">
+      <h1>WheresAt <span class="material-icons font-size-2rem">chat</span></h1>
+    </header>
+    <main id="chat-container" class="m-b-20">
       <section id="chat-window">
         <div id="output"></div>
         <div id="feedback"></div>
       </section>
       <section>
-        <input id="handle" type="text" class="field" placeholder="Handle" />
-        <input id="message" type="text" class="field" placeholder="Message" />
-        <select id="emoji-dropdown"></select>
+        <input id="handle" type="text" class="field" placeholder="Your name..." />
+        <input id="message" type="text" class="field" placeholder="Your message..." />
+        <div id="emoji-dropdown"><select></select></div>
         <button id="send" class="btn primary" disabled>Send</button>
       </section>
     </main>
-    <main id="admin-container">
+    <footer id="admin-container">
       <a href="/" target="_blank" class="btn secondary">New window</a>
       <button id="clear-chat" class="btn secondary">Clear</a>
-    </main>
+    </footer>
   </article>
 
   <script src="/socket.io/socket.io.js"></script>
   <script src="https://rawgit.com/theraot/emoji/master/emoji.js"></script>
-  <script src="/script.js"></script>
+  <script src="./scripts/script.js"></script>
 
 </body>
 </html>

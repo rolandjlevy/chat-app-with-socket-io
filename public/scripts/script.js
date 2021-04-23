@@ -14,8 +14,8 @@ function sendMessage() {
 
 // Listen for chat events
 socket.on('chat', (data) => {
-  const person = data.id === socket.id ? 'self' : '';
-  $('#output').innerHTML += `<p class="${person}"><strong>${data.handle}:</strong> <span>${data.message}</span></p>`;
+  const person = data.id === socket.id ? 'self' : 'other';
+  $('#output').innerHTML += `<p class="${person}"><span><strong>${data.handle}:</strong> <span class="message-text">${data.message}</span><span class="arrow"></span></span></p>`;
   $('#feedback').innerHTML = '';
   $('#chat-window').scrollTop = $('#chat-window').scrollHeight;
 });
@@ -62,11 +62,11 @@ $('#clear-chat').addEventListener('click', (e) => {
 emoji.forEach(item => {
   const option = document.createElement('option');
   option.innerHTML = item;
-  $('#emoji-dropdown').appendChild(option);
+  $('#emoji-dropdown > select').appendChild(option);
 });
 
 // add emoji to message on change
-$('#emoji-dropdown').addEventListener('change', (e) => {
+$('#emoji-dropdown > select').addEventListener('change', (e) => {
   $('#message').value += e.target.value;
   buttonState['message'] = e.currentTarget.value.length;
   $('#send').disabled = !buttonEnabled();

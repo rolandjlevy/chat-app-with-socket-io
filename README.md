@@ -16,3 +16,4 @@ A simple chat app using Node, Express and [socket.io](https://socket.io)
 ### Reference
 - [Emoji library](https://github.com/theraot/emoji)
 - [How to create an emoji dropdown](https://stackoverflow.com/questions/39871916/is-it-possible-to-generate-all-the-emojis-and-append-to-the-select-dropdown)
+- [CSS patterns](http://www.heropatterns.com)
