@@ -15,7 +15,7 @@
 <body>
 
   <article id="wrapper">
-    <header class="m-b-20">
+    <header class="m-b-10">
       <h1>WheresAt <span class="material-icons font-size-2rem">chat</span></h1>
     </header>
     <main id="chat-container" class="m-b-20">
@@ -26,13 +26,15 @@
       <section>
         <input id="handle" type="text" class="field" placeholder="Your name..." />
         <input id="message" type="text" class="field" placeholder="Your message..." />
-        <div id="emoji-dropdown"><select></select></div>
+        <div id="emoji-dropdown">
+          <select></select>
+          <a href="/" target="_blank" class="btn secondary">New window</a>
+          <button id="clear-chat" class="btn secondary m-l-5">Clear</a>
+        </div>
         <button id="send" class="btn primary" disabled>Send</button>
       </section>
     </main>
     <footer id="admin-container">
-      <a href="/" target="_blank" class="btn secondary">New window</a>
-      <button id="clear-chat" class="btn secondary">Clear</a>
     </footer>
   </article>
 
