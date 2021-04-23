@@ -10,7 +10,7 @@ A simple chat app using Node, Express and [socket.io](https://socket.io)
 
 ### Links 🔗
 - [Live demo](https://chat-app-with-socket-io.rolandjlevy.repl.co/)
-- [View source code](https://github.com/rolandjlevy/chat-app-with-socket-io)
+- [View source code](https://replit.com/@RolandJLevy/chat-app-with-socket-io)
 - [Github repo](https://github.com/rolandjlevy/chat-app-with-socket-io)
 
 ### Reference
