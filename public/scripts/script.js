@@ -35,20 +35,24 @@ $('#send').addEventListener('click', (e) => {
 });
 
 // press enter to emit data down the socket to the server
-$('#message').addEventListener('keyup', (e) => {
-  if (e.key === 'Enter' && buttonEnabled()) {
-    sendMessage();
-    return;
-  }
-  socket.emit('typing', $('#handle').value);
-  buttonState['message'] = e.target.value.length;
-  $('#send').disabled = !buttonEnabled();
+['touchend', 'keyup'].forEach(event => {
+  $('#message').addEventListener(event, (e) => {
+    if (e.key === 'Enter' && buttonEnabled()) {
+      sendMessage();
+      return;
+    }
+    socket.emit('typing', $('#handle').value);
+    buttonState['message'] = e.target.value.length;
+    $('#send').disabled = !buttonEnabled();
+  });
 });
 
 // validate send button
-$('#handle').addEventListener('keyup', (e) => {
-  buttonState['handle'] = e.target.value.length;
-  $('#send').disabled = !buttonEnabled();
+['touchend', 'keyup'].forEach(event => {
+  $('#handle').addEventListener(event, (e) => {
+    buttonState['handle'] = e.target.value.length;
+    $('#send').disabled = !buttonEnabled();
+  });
 });
 
 // clear chat content

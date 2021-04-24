@@ -10,13 +10,11 @@
 }
 
 * {
-  /* font-family: 'Open Sans', sans-serif; */
   font-family: 'Roboto', sans-serif;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 
 body {
-  /* background: #f9f9f9; */
   margin: 0;
   overflow: hidden;
 }
@@ -26,15 +24,12 @@ h1 {
   color: var(--green-deep);
   margin: 0;
   font-family: 'Alegreya', serif;
-  /* font-family: 'Signika', sans-serif; */
-  /* font-family: 'Spartan', sans-serif; */
-  /* font-family: 'Truculenta', sans-serif; */
 }
 
 #wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   height: 100vh;
 }
 
@@ -78,7 +73,7 @@ header {
 }
 
 #output p * {
-  font-size: 0.825rem;
+  font-size: 1rem;
 }
 
 #output p > span {
@@ -135,7 +130,7 @@ header {
 }
 
 #feedback p > em {
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 
 #output p.self strong {
@@ -162,6 +157,10 @@ input {
   background: #f9f9f9;
 }
 
+/***********/
+/* Buttons */
+/***********/
+
 .btn {
   color: #fff;
   font-size: 1rem;
@@ -174,7 +173,7 @@ input {
   padding: 10px 15px;
   text-decoration: none;
   font-weight: 500;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
 }
 
 .btn.primary {
@@ -198,24 +197,12 @@ input {
   border: none;
   color: var(--green-deep);
   font-weight: 400;
+  font-size: 0.875rem;
 }
 
 .btn.secondary:hover:not(:disabled) {
   /* background-color: var(--grey-dark); */
   background-color: #ccc;
-}
-
-#emoji-dropdown {
-  background: #f9f9f9;
-}
-
-#emoji-dropdown > select {
-  margin: 5px;
-  padding: 7px 0 3px 0;
-  outline: none;
-  border: none;
-  background: none;
-  cursor: pointer;
 }
 
 .btn.emoji {
@@ -238,9 +225,30 @@ input {
   cursor: not-allowed;
 }
 
+/**********/
+/* Emojis */
+/**********/
+
+#emoji-dropdown {
+  background: #f9f9f9;
+}
+
+#emoji-dropdown > select {
+  margin: 5px;
+  padding: 7px 0 3px 0;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
 .material-icons.font-size-2rem { 
   font-size: 2rem; 
 }
+
+/**********/
+/* Layout */
+/**********/
 
 .m-l-5 { margin-left: 5px; }
 .m-t-10 { margin-top: 10px; }
