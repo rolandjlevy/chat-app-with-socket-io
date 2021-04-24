@@ -3,14 +3,14 @@
 >  A simple messaging app using socket.io
 
 ## Table of contents
-* [Purpose](#purpose)
-* [Screenshot](#screenshot)
-* [Links](#links)
-* [Setup](#setup)
-* [Technologies](#technologies)
-* [Features](#features)
-* [Reference](#reference)
-* [Contact](#contact)
+* [Purpose](#purpose-)
+* [Screenshot](#screenshot-)
+* [Links](#links-)
+* [Setup](#setup-)
+* [Technologies](#technologies-)
+* [Features](#features-)
+* [Reference](#reference-)
+* [Contact](#contact-)
 
 ---
 
@@ -38,13 +38,13 @@ The aim of this project was to get practical experience of websockets by buildin
 * [CSS patterns](http://www.heropatterns.com)
 
 ## Features 💡
-* Uses the Websocket API to enable bi-directional communication which characterizes live messaging
-* Emojis dropdown menu available in desktop view
+* Uses the [Websocket API](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) to enable bi-directional communication which characterizes live messaging
+* [Emojis dropdown menu](https://github.com/theraot/emoji) available in desktop view
 * Fully responsive
 
 ## Reference 📙
 - This project was inpired by [NetNinja's](https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg) youtube tutorial on [Websockets](https://www.youtube.com/watch?v=vQjiN8Qgs3c)
-- [How to create an emoji dropdown](https://stackoverflow.com/questions/39871916/is-it-possible-to-generate-all-the-emojis-and-append-to-the-select-dropdown)
+- How to create an [emoji dropdown](https://stackoverflow.com/questions/39871916/is-it-possible-to-generate-all-the-emojis-and-append-to-the-select-dropdown)
 
 ## Contact 📧
 Created by [Roland](https://rolandlevy.co.uk) - feel free to contact me!
