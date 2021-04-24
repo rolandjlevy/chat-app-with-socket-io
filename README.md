@@ -1,4 +1,4 @@
-# BackChat
+# BackChat 💬
 
 >  A simple messaging app using socket.io
 
