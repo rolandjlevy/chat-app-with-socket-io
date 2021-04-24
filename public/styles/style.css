@@ -5,13 +5,14 @@
   --green-deep: hsl(160, 70%, 25%);
   --grey: hsl(0, 0%, 65%);
   --grey-light: hsl(0, 0%, 95%);
-  --grey-dark: hsl(160, 0%, 55%);
+  --grey-dark: hsl(160, 0%, 45%);
   --grey-deep: hsl(160, 0%, 25%);
 }
 
 * {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
+  color: var(--grey-dark);
 }
 
 body {
@@ -42,8 +43,7 @@ h1 {
   border-radius: 5px;
 }
 
-#admin-container,
-header {
+footer, header {
   max-width: 500px;
   width: calc(100vw - 60px);
   margin: 0 auto;
@@ -229,6 +229,18 @@ input {
 }
 
 /**********/
+/* Footer */
+/**********/
+
+footer {
+  font-size: 0.875;
+}
+
+footer > p {
+  margin: 0;
+}
+
+/**********/
 /* Emojis */
 /**********/
 
@@ -249,7 +261,12 @@ input {
   cursor: pointer;
 }
 
+/*********/
+/* Icons */
+/*********/
+
 .material-icons { 
+  color: currentColor;
   transition: font-size 0.5s ease;
 }
 
@@ -273,6 +290,10 @@ input {
 .m-t-30 { margin-top: 30px; }
 .m-b-30 { margin-bottom: 30px; }
 
+.text-center {
+  text-align: center;
+}
+
 @keyframes fade-in {
   to {  opacity: 1; }
 }
@@ -290,5 +311,8 @@ input {
   #admin-area {
     max-height: 0px;
     opacity: 0;
+  }
+  #admin-area * {
+    pointer-events: none;
   }
 }

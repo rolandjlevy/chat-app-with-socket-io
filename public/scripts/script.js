@@ -10,6 +10,7 @@ function sendMessage() {
     id: socket.id
   };
   socket.emit('chat', data);
+  $('#message').value = '';
 }
 
 // Listen for chat events

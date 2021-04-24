@@ -18,14 +18,14 @@
     <header class="m-t-10 m-b-10">
       <h1>WheresAt <span class="material-icons font-size-2rem">chat</span></h1>
     </header>
-    <main id="chat-container" class="m-b-20">
+    <main id="chat-container">
       <section id="chat-window">
         <div id="output"></div>
         <div id="feedback"></div>
       </section>
       <section>
-        <input id="handle" type="text" class="field" placeholder="Your name..." />
-        <input id="message" type="text" class="field" placeholder="Your message..." />
+        <input id="handle" type="text" class="field" placeholder="Your name..." autofocus />
+        <input id="message" type="text" class="field" placeholder="Type a message..." />
         <div id="admin-area">
           <select id="emoji-dropdown"></select>
           <a href="/" target="_blank" class="btn secondary"><span class="material-icons font-size-1rem">open_in_new</span></a>
@@ -34,7 +34,8 @@
         <button id="send" class="btn primary" disabled>Send</button>
       </section>
     </main>
-    <footer id="admin-container">
+    <footer>
+      <p class="text-center"><a href="https://rolandlevy.co.uk" target="_blank">see more of my projects</a> <span class="material-icons font-size-1rem">open_in_new</span></p>
     </footer>
   </article>
 
