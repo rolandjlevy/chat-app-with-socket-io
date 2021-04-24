@@ -15,17 +15,17 @@
 ---
 
 ## Purpose 🎯
-The aim of this project was to get practical experience of websockets by building a chat app.
+The aim of this project was to get practical experience of websockets by building a simple messaging app.
 
 ## Screenshot 📷
 ![BackChat](./public/images/backchat.jpg)
 
-### Links 🔗
+## Links 🔗
 - [Live demo](https://chat-app-with-socket-io.rolandjlevy.repl.co/)
 - [View source code](https://replit.com/@RolandJLevy/chat-app-with-socket-io)
 - [Github repo](https://github.com/rolandjlevy/chat-app-with-socket-io)
 
-### Setup ⚙️
+## Setup ⚙️
 - Clone this repo `git clone https://github.com/rolandjlevy/chat-app-with-socket-io.git`
 - Download all dependencies by running `npm install`
 - Run `npm run start` to start the server
