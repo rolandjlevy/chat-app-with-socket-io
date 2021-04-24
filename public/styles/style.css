@@ -235,8 +235,8 @@ input {
 #admin-area {
   display: block;
   background: #f9f9f9;
+  max-height: initial;
   opacity: 1;
-  transform: scaleY(1);
   transition: all 0.2s ease;
 }
 
