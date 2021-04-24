@@ -232,11 +232,15 @@ input {
 /* Emojis */
 /**********/
 
-#emoji-dropdown {
+#admin-area {
+  display: block;
   background: #f9f9f9;
+  opacity: 1;
+  transform: scaleY(1);
+  transition: all 0.2s ease;
 }
 
-#emoji-dropdown > select {
+#admin-area > select {
   margin: 5px;
   padding: 7px 0 3px 0;
   outline: none;
@@ -275,12 +279,16 @@ input {
 
 @media only screen and (max-width: 480px) {
   #chat-window.collapsed {
-    height: 200px;
+    height: 250px;
   }
   h1 {
     font-size: 2rem;
   }
   .material-icons.font-size-2rem { 
     font-size: 1.5rem; 
+  }
+  #admin-area {
+    max-height: 0px;
+    opacity: 0;
   }
 }

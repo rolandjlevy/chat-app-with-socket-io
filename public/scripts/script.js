@@ -76,11 +76,11 @@ $('#clear-chat').addEventListener('click', (e) => {
 emoji.forEach(item => {
   const option = document.createElement('option');
   option.innerHTML = item;
-  $('#emoji-dropdown > select').appendChild(option);
+  $('#emoji-dropdown').appendChild(option);
 });
 
 // add emoji to message on change
-$('#emoji-dropdown > select').addEventListener('change', (e) => {
+$('#emoji-dropdown').addEventListener('change', (e) => {
   $('#message').value += e.target.value;
   buttonState['message'] = e.currentTarget.value.length;
   $('#send').disabled = !buttonEnabled();
