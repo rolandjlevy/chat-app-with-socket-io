@@ -5,7 +5,7 @@
   --green-deep: hsl(160, 70%, 25%);
   --grey: hsl(0, 0%, 65%);
   --grey-light: hsl(0, 0%, 95%);
-  --grey-dark: hsl(160, 0%, 45%);
+  --grey-dark: hsl(160, 0%, 50%);
   --grey-deep: hsl(160, 0%, 25%);
 }
 
@@ -35,18 +35,18 @@ h1 {
   height: 100vh;
 }
 
+footer, header {
+  max-width: 500px;
+  width: calc(100vw - 60px);
+  margin: 0 auto;
+}
+
 #chat-container {
   max-width: 500px;
   width: calc(100vw - 60px);
   margin: 0 auto 20px auto;
   box-shadow: 0 0 15px 5px rgba(0,0,0,0.1);
   border-radius: 5px;
-}
-
-footer, header {
-  max-width: 500px;
-  width: calc(100vw - 60px);
-  margin: 0 auto;
 }
 
 #chat-window {
@@ -58,6 +58,10 @@ footer, header {
   border-bottom: 1px solid #ddd;
   transition: height 0.5s ease;
 }
+
+/**********/
+/* Output */
+/**********/
 
 #output p {
   position: relative;
@@ -125,6 +129,18 @@ footer, header {
   border-top-left-radius: 0;
 }
 
+#output p.self strong {
+  color: var(--green-deep);
+}
+
+#output p.other strong {
+  color: var(--grey-deep);
+}
+
+/************/
+/* Feedback */
+/************/
+
 #feedback p {
   color: #aaa;
   padding: 14px 0px;
@@ -133,14 +149,6 @@ footer, header {
 
 #feedback p > em {
   font-size: 1rem;
-}
-
-#output p.self strong {
-  color: var(--green-deep);
-}
-
-#output p.other strong {
-  color: var(--grey-deep);
 }
 
 label {
@@ -167,7 +175,6 @@ input {
   color: #fff;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.2s ease;
   opacity: 1;
   pointer-events: all;
   display: inline-block;
@@ -175,7 +182,7 @@ input {
   padding: 10px 15px;
   text-decoration: none;
   font-weight: 500;
-  /* letter-spacing: 1px; */
+  transition: background-color 0.2s ease;
 }
 
 .btn.primary {
@@ -187,12 +194,10 @@ input {
 
 .btn.primary:hover:not(:disabled) {
   background-color: var(--green-dark);
+  border: 1px solid var(--green-dark);
 }
 
 .btn.secondary {
-  /* border-radius: 5px;
-  background-color: var(--grey);
-  border: 1px solid var(--grey); */
   padding: 4px;
   padding-bottom: 0;
   border-radius: 3px;
@@ -204,7 +209,6 @@ input {
 }
 
 .btn.secondary:hover:not(:disabled) {
-  /* background-color: var(--grey-dark); */
   background-color: #ccc;
 }
 
@@ -226,6 +230,8 @@ input {
   opacity: 0.7;
   pointer-events: none;
   cursor: not-allowed;
+  background-color: var(--grey-dark);
+  border: 1px solid var(--grey-dark);
 }
 
 /**********/
@@ -238,6 +244,14 @@ footer {
 
 footer > p {
   margin: 0;
+}
+
+footer > p > a {
+  color: var(--green-deep);
+}
+
+footer > p > a:hover {
+  text-decoration: none;
 }
 
 /**********/

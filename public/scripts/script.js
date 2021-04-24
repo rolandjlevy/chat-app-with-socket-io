@@ -11,6 +11,8 @@ function sendMessage() {
   };
   socket.emit('chat', data);
   $('#message').value = '';
+  buttonState['message'] = false;
+  $('#send').disabled = !buttonEnabled();
 }
 
 // Listen for chat events
