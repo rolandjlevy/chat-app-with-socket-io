@@ -55,6 +55,16 @@ $('#send').addEventListener('click', (e) => {
   });
 });
 
+// Expand / collapse the chat window
+window.addEventListener('click', (e) => {
+  const collapse = ['INPUT', 'SELECT'].includes(e.target.tagName);
+  if (collapse) {
+    $('#chat-window').classList.add('collapsed');
+  } else {
+    $('#chat-window').classList.remove('collapsed');
+  }
+});
+
 // clear chat content
 $('#clear-chat').addEventListener('click', (e) => {
   console.log(e.target);

@@ -24,6 +24,7 @@ h1 {
   color: var(--green-deep);
   margin: 0;
   font-family: 'Alegreya', serif;
+  transition: font-size 0.5s ease;
 }
 
 #wrapper {
@@ -49,12 +50,13 @@ header {
 }
 
 #chat-window {
-  height: 300px;
+  height: 400px;
   overflow: auto;
   background: #fff;
   padding: 10px;
   border-radius: 5px 5px 0 0;
   border-bottom: 1px solid #ddd;
+  transition: height 0.5s ease;
 }
 
 #output p {
@@ -191,8 +193,9 @@ input {
   /* border-radius: 5px;
   background-color: var(--grey);
   border: 1px solid var(--grey); */
-  padding: 5px 9px;
-  border-radius: 5px;
+  padding: 4px;
+  padding-bottom: 0;
+  border-radius: 3px;
   background: #ddd;
   border: none;
   color: var(--green-deep);
@@ -242,8 +245,16 @@ input {
   cursor: pointer;
 }
 
+.material-icons { 
+  transition: font-size 0.5s ease;
+}
+
 .material-icons.font-size-2rem { 
   font-size: 2rem; 
+}
+
+.material-icons.font-size-1rem { 
+  font-size: 1rem; 
 }
 
 /**********/
@@ -260,4 +271,16 @@ input {
 
 @keyframes fade-in {
   to {  opacity: 1; }
+}
+
+@media only screen and (max-width: 480px) {
+  #chat-window.collapsed {
+    height: 200px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .material-icons.font-size-2rem { 
+    font-size: 1.5rem; 
+  }
 }
