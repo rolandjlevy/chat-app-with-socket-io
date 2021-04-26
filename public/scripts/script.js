@@ -88,3 +88,11 @@ $('#emoji-dropdown').addEventListener('change', (e) => {
   buttonState['message'] = e.currentTarget.value.length;
   $('#send').disabled = !buttonEnabled();
 });
+
+// broadcasted image
+// btoa() method encodes a string in base-64
+const imgChunks = [];
+socket.on('img-chunk', (chunk) => {
+  imgChunks.push(chunk);
+  $('#img-stream').setAttribute('src', 'data:image/jpeg;base64,' + window.btoa(imgChunks));
+});

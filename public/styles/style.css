@@ -292,6 +292,12 @@ footer > p > a:hover {
   font-size: 1rem; 
 }
 
+#img-stream {
+  width: 50vw;
+  object-fit: cover;
+  display: none;
+}
+
 /**********/
 /* Layout */
 /**********/
