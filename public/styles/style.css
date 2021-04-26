@@ -86,6 +86,7 @@ footer, header {
   padding: 8px 12px 6px 12px;
   border-radius: 10px;
   box-shadow: 0 2px 2px -1px #00000066;
+  max-width: 80%;
 }
 
 #output p.self {
