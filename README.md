@@ -41,7 +41,7 @@ The aim of this project was to get practical experience of websockets by buildin
 ## Features 💡
 * Uses the [Websocket API](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) to enable bi-directional communication which characterizes live messaging
 * [Emojis dropdown menu](https://github.com/theraot/emoji) available in desktop view
-* Protection against XSS attacks like this: `<img onerror="alert('XSS attack!')`
+* Protection against XSS attacks like this: `<img onerror="alert('XSS attack!')>`
 * Fully responsive
 
 ## Reference 📙
