@@ -1,11 +1,13 @@
 :root {
+  --green-lighter: hsl(160, 40%, 99%);
   --green-light: hsl(160, 70%, 90%);
   --green: hsl(160, 70%, 40%);
   --green-dark: hsl(160, 70%, 35%);
   --green-deep: hsl(160, 70%, 25%);
   --grey: hsl(0, 0%, 65%);
   --grey-light: hsl(0, 0%, 95%);
-  --grey-dark: hsl(160, 0%, 50%);
+  --grey-mid: hsl(160, 0%, 40%);
+  --grey-dark: hsl(160, 0%, 30%);
   --grey-deep: hsl(160, 0%, 25%);
 }
 
@@ -45,7 +47,7 @@ footer, header {
   max-width: 500px;
   width: calc(100vw - 60px);
   margin: 0 auto 20px auto;
-  box-shadow: 0 0 15px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 0 15px 5px hsla(160, 50%, 20%, 0.2);
   border-radius: 5px;
 }
 
@@ -165,7 +167,8 @@ input {
   display: block;
   width: 100%;
   border-bottom: 1px solid #ddd;
-  background: #f9f9f9;
+  background: var(--green-lighter);
+  outline-color: var(--green);
 }
 
 /***********/
@@ -206,7 +209,7 @@ input {
   border: none;
   color: var(--green-deep);
   font-weight: 400;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 
 .btn.secondary:hover:not(:disabled) {
@@ -231,8 +234,8 @@ input {
   opacity: 0.7;
   pointer-events: none;
   cursor: not-allowed;
-  background-color: var(--grey-dark);
-  border: 1px solid var(--grey-dark);
+  background-color: var(--grey-mid);
+  border: 1px solid var(--grey-mid);
 }
 
 /**********/
@@ -261,7 +264,7 @@ footer > p > a:hover {
 
 #admin-area {
   display: block;
-  background: #f9f9f9;
+  background: var(--green-lighter);
   max-height: initial;
   opacity: 1;
   transition: all 0.2s ease;
