@@ -18,7 +18,7 @@
 The aim of this project was to get practical experience of websockets by building a simple messaging app.
 
 ## Screenshot 📷
-![BackChat](./public/images/backchat.jpg)
+![BackChat](public/images/backchat.jpg)
 
 ## Links 🔗
 - [Live demo](https://chat-app-with-socket-io.rolandjlevy.repl.co/)

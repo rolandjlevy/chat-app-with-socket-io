@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, 'public')));
 
 io.on('connection', (socket) => {
-  console.log('socket made connection. Socket ID:', socket.id);
+  // console.log('socket made connection. Socket ID:', socket.id);
   socket.on('chat', (data) => {
     const encodedData = encode(data);
     io.sockets.emit('chat', encodedData);

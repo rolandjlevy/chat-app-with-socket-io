@@ -35,6 +35,11 @@ h1 {
   flex-direction: column;
   justify-content: flex-start;
   height: 100vh;
+  opacity: 0;
+}
+
+.fade-in {
+  animation: fadeIn 2s ease 0s 1 normal forwards;
 }
 
 footer, header {
@@ -74,7 +79,7 @@ footer, header {
 }
 
 #output p:last-child {
-  animation-name: fade-in;
+  animation-name: fadeIn;
   animation-fill-mode: forwards;
   animation-duration: 0.5s;
   opacity: 0;
@@ -318,7 +323,7 @@ footer > p > a:hover {
   text-align: center;
 }
 
-@keyframes fade-in {
+@keyframes fadeIn {
   to {  opacity: 1; }
 }
 
