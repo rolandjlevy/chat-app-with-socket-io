@@ -1,8 +1,26 @@
-// Emoji buttons
-const emojis = ["😀", "😅", "😉", "😂", "🤩", "😍"];
+/**
+ * Emoji functionality module
+ *
+ * Initializes emoji buttons and a dropdown selector for inserting emojis into messages.
+ * Creates quick-access emoji buttons for common emojis and populates a dropdown with
+ * extended emoji ranges including emoticons, dingbats, and symbols.
+ *
+ * Dependencies:
+ * - DOM elements: #message (textarea/input), #emoji-container, #emoji-dropdown, #send (button)
+ * - Global: buttonState, buttonEnabled() function
+ *
+ * @module emojis
+ * @description Manages emoji insertion into the chat message input field
+ */
 
-emojis.forEach(emoji => {
-  const btn = document.createElement('btn');
+const $ = (el) => document.querySelector(el);
+const $$ = (el) => document.querySelectorAll(el);
+
+// Emoji buttons
+const emojis = ['😀', '😅', '😉', '😂', '🤩', '😍'];
+
+emojis.forEach((emoji) => {
+  const btn = document.createElement('button');
   btn.classList.add('btn', 'emoji');
   btn.setAttribute('value', emoji);
   btn.textContent = emoji;
@@ -15,15 +33,15 @@ emojis.forEach(emoji => {
 });
 
 const emojRange = [
-  { start:128513, end:128591, name:'emoticons' }, 
-  { start:  9986, end: 10160, name:'dingbats'  }, 
-  { start:128640, end:128704, name:'symbols'  }
+  { start: 128513, end: 128591, name: 'emoticons' },
+  { start: 9986, end: 10160, name: 'dingbats' },
+  { start: 128640, end: 128704, name: 'symbols' },
 ];
-for (let i=0; i<emojRange.length; i++) {
-  for (let x=emojRange[i].start; x<emojRange[i].end; x++) {
+for (let i = 0; i < emojRange.length; i++) {
+  for (let x = emojRange[i].start; x < emojRange[i].end; x++) {
     const option = document.createElement('option');
     option.value = x;
-    option.innerHTML = "&#" + x + ";";
+    option.innerHTML = '&#' + x + ';';
     $('#emoji-dropdown').appendChild(option);
   }
 }
