@@ -1,6 +1,43 @@
 const $ = (el) => document.querySelector(el);
 const $$ = (el) => document.querySelectorAll(el);
 
+// Emoji buttons
+const emojis = [
+  '👍',
+  '❤️',
+  '😅',
+  '😂',
+  '😀',
+  '😃',
+  '😄',
+  '😁',
+  '😆',
+  '🤣',
+  '🔥',
+  '✨',
+];
+
+// toggle send button
+const buttonState = { handle: false, message: false };
+const buttonEnabled = () => Object.values(buttonState).every((n) => Boolean(n));
+
+// generate emojis dropdown
+emojis.forEach((emoji) => {
+  const option = document.createElement('option');
+  option.innerHTML = emoji;
+  $('#emoji-dropdown').appendChild(option);
+});
+
+// add emoji to message on change
+$('#emoji-dropdown').addEventListener('change', (e) => {
+  const selectedOption = e.currentTarget.options[e.currentTarget.selectedIndex];
+  if (selectedOption.textContent) {
+    $('#message').value += selectedOption.textContent;
+    buttonState['message'] = $('#message').value.length;
+    $('#send').disabled = !buttonEnabled();
+  }
+});
+
 let socket = io();
 
 const sendMessage = () => {
@@ -28,10 +65,6 @@ socket.on('chat', (data) => {
 socket.on('typing', (handle) => {
   $('#feedback').innerHTML = `<p><em>${handle} is typing a message...</em></p>`;
 });
-
-// toggle send button
-const buttonState = { handle: false, message: false };
-const buttonEnabled = () => Object.values(buttonState).every((n) => Boolean(n));
 
 // click send to emit data down the socket to the server
 $('#send').addEventListener('click', (e) => {
@@ -74,20 +107,6 @@ $('#clear-chat').addEventListener('click', (e) => {
   console.log(e.target);
   $('#output').innerHTML = '';
   $('#feedback').innerHTML = '';
-});
-
-// generate emojis dropdown
-emoji.forEach((item) => {
-  const option = document.createElement('option');
-  option.innerHTML = item;
-  $('#emoji-dropdown').appendChild(option);
-});
-
-// add emoji to message on change
-$('#emoji-dropdown').addEventListener('change', (e) => {
-  $('#message').value += e.target.value;
-  buttonState['message'] = e.currentTarget.value.length;
-  $('#send').disabled = !buttonEnabled();
 });
 
 // broadcasted image
