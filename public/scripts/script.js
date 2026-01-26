@@ -40,7 +40,7 @@ $('#emoji-dropdown').addEventListener('change', (e) => {
 
 // Fetch emojis from Emoji API
 const url = 'https://emoji-api.com/emojis';
-fetch(url + '?access_key=')
+fetch(url + `?access_key=${EMOJI_API_KEY}`)
   .then((res) => res.json())
   .then((emojiChars) => {
     const container = $('#emoji-popup');

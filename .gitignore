@@ -1,4 +1,3 @@
 node_modules
 notes.md
-public/scripts/emojis.js
-.env
+public/scripts/config.js
