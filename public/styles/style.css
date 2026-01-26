@@ -42,7 +42,8 @@ h1 {
   animation: fadeIn 2s ease 0s 1 normal forwards;
 }
 
-footer, header {
+footer,
+header {
   max-width: 500px;
   width: calc(100vw - 60px);
   margin: 0 auto;
@@ -288,17 +289,17 @@ footer > p > a:hover {
 /* Icons */
 /*********/
 
-.material-icons { 
+.material-icons {
   color: currentColor;
   transition: font-size 0.5s ease;
 }
 
-.material-icons.font-size-2rem { 
-  font-size: 2rem; 
+.material-icons.font-size-2rem {
+  font-size: 2rem;
 }
 
-.material-icons.font-size-1rem { 
-  font-size: 1rem; 
+.material-icons.font-size-1rem {
+  font-size: 1rem;
 }
 
 #img-stream {
@@ -307,24 +308,69 @@ footer > p > a:hover {
   display: none;
 }
 
+#emoji-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#emoji-popup {
+  display: flex;
+  flex-wrap: wrap;
+  visibility: hidden;
+  gap: 10px;
+  max-width: 210px;
+  max-height: 210px;
+  overflow: auto;
+  padding: 10px;
+}
+
+#emoji-popup.visible {
+  visibility: visible;
+  border-color: #ccc;
+  border-width: 1px;
+}
+
+#emoji-popup > span {
+  display: inline-block;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 /**********/
 /* Layout */
 /**********/
 
-.m-l-5 { margin-left: 5px; }
-.m-t-10 { margin-top: 10px; }
-.m-b-10 { margin-bottom: 10px; }
-.m-t-20 { margin-top: 20px; }
-.m-b-20 { margin-bottom: 20px; }
-.m-t-30 { margin-top: 30px; }
-.m-b-30 { margin-bottom: 30px; }
+.m-l-5 {
+  margin-left: 5px;
+}
+.m-t-10 {
+  margin-top: 10px;
+}
+.m-b-10 {
+  margin-bottom: 10px;
+}
+.m-t-20 {
+  margin-top: 20px;
+}
+.m-b-20 {
+  margin-bottom: 20px;
+}
+.m-t-30 {
+  margin-top: 30px;
+}
+.m-b-30 {
+  margin-bottom: 30px;
+}
 
 .text-center {
   text-align: center;
 }
 
 @keyframes fadeIn {
-  to {  opacity: 1; }
+  to {
+    opacity: 1;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -334,8 +380,8 @@ footer > p > a:hover {
   h1 {
     font-size: 2rem;
   }
-  .material-icons.font-size-2rem { 
-    font-size: 1.5rem; 
+  .material-icons.font-size-2rem {
+    font-size: 1.5rem;
   }
   #admin-area {
     max-height: 0px;
