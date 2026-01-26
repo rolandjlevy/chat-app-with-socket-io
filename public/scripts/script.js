@@ -38,43 +38,16 @@ $('#emoji-dropdown').addEventListener('change', (e) => {
   }
 });
 
-// Fetch emojis from Emoji API
-const url = 'https://emoji-api.com/emojis';
-if (typeof EMOJI_API_KEY !== 'undefined') {
-  fetch(url + `?access_key=${EMOJI_API_KEY}`)
-    .then((res) => res.json())
-    .then((emojiChars) => {
-      const container = $('#emoji-popup');
-      emojiChars.forEach((e) => {
-        const span = document.createElement('span');
-        span.textContent = e.character;
-        container.appendChild(span);
-      });
-
-      const button = $('#emoji-btn');
-      button.disabled = false;
-      button.addEventListener('click', () => {
-        container.classList.toggle('visible');
-      });
-
-      $('#emoji-popup').addEventListener('click', (e) => {
-        if (e.target.tagName === 'SPAN') {
-          $('#message').value += e.target.textContent;
-          buttonState['message'] = $('#message').value.length;
-          $('#send').disabled = !buttonEnabled();
-        }
-      });
-    })
-    .catch((error) => {
-      console.error('Error fetching emojis:', error);
-      $('#emoji-btn').disabled = true;
+// Fetch emojis from API
+fetch('/api/data')
+  .then((res) => res.json())
+  .then((emojiChars) => {
+    const container = $('#emoji-popup');
+    emojiChars.forEach((e) => {
+      const span = document.createElement('span');
+      span.textContent = e.character;
+      container.appendChild(span);
     });
-} else {
-  console.warn(
-    'EMOJI_API_KEY is not defined. Make sure config.js is loaded before this script.',
-  );
-  $('#emoji-btn').disabled = true;
-}
 
 let socket = io();
 
