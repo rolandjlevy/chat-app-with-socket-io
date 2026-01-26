@@ -70,7 +70,9 @@ if (typeof EMOJI_API_KEY !== 'undefined') {
       $('#emoji-btn').disabled = true;
     });
 } else {
-  console.warn('EMOJI_API_KEY is not defined. Make sure config.js is loaded before this script.');
+  console.warn(
+    'EMOJI_API_KEY is not defined. Make sure config.js is loaded before this script.',
+  );
   $('#emoji-btn').disabled = true;
 }
 
