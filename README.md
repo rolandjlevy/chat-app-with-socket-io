@@ -41,7 +41,7 @@ This project was created to gain hands-on experience with WebSockets by building
 
 ## 🔗 Links
 
-- [Live Demo](https://chat-app-with-socket-io.rolandjlevy.repl.co/)
+- [Live Demo](https://chat-app-with-socket-io-sigma.vercel.app)
 - [GitHub Repo](https://github.com/rolandjlevy/chat-app-with-socket-io)
 
 ## 🛠️ Technologies Used
