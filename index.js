@@ -5,18 +5,18 @@ const server = require('http').createServer(app);
 const io = require('socket.io')(server);
 const path = require('path');
 const fs = require('fs');
+require('dotenv').config();
 const port = process.env.PORT || 3000;
+const apiKey = process.env.EMOJI_API_KEY;
+const fetch = require('node-fetch').default;
 
 app.use(express.static(path.join(__dirname, 'public')));
 
 const url = 'https://emoji-api.com/emojis';
 
 app.get('/api/data', async (req, res) => {
-  const response = await fetch(
-    `${url}?access_key=${process.env.EMOJI_API_KEY}`,
-  );
+  const response = await fetch(`${url}?access_key=${apiKey}`);
   const data = await response.json();
-  console.log('Fetched emojis from API', data);
   res.json(data);
 });
 

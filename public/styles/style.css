@@ -6,6 +6,7 @@
   --green-deep: hsl(160, 70%, 25%);
   --grey-light: hsl(0, 0%, 95%);
   --grey: hsl(0, 0%, 65%);
+  --grey-mid-light: hsl(160, 0%, 50%);
   --grey-mid: hsl(160, 0%, 40%);
   --grey-dark: hsl(160, 0%, 30%);
   --grey-deep: hsl(160, 0%, 25%);
@@ -47,6 +48,24 @@ header {
   max-width: 500px;
   width: calc(100vw - 60px);
   margin: 0 auto;
+}
+
+.intro-text {
+  color: var(--grey-mid-light);
+  font-size: 0.875em;
+  padding: 10px;
+  background-color: #ffffff99;
+  border-radius: 5px;
+  line-height: 1.5;
+}
+
+.button-icon-label {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.75rem;
+  gap: 5px;
+  color: var(--green-deep);
+  font-weight: 400;
 }
 
 #chat-container {
@@ -249,7 +268,7 @@ input {
 /**********/
 
 footer {
-  font-size: 0.875;
+  font-size: 0.875rem;
 }
 
 footer > p {
@@ -302,6 +321,10 @@ footer > p > a:hover {
   font-size: 1rem;
 }
 
+.font-size-14px {
+  font-size: 0.875rem;
+}
+
 #img-stream {
   width: 50vw;
   object-fit: cover;
@@ -347,6 +370,9 @@ footer > p > a:hover {
 .m-t-10 {
   margin-top: 10px;
 }
+.m-r-10 {
+  margin-right: 10px;
+}
 .m-b-10 {
   margin-bottom: 10px;
 }
@@ -361,6 +387,14 @@ footer > p > a:hover {
 }
 .m-b-30 {
   margin-bottom: 30px;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.p-5 {
+  padding: 5px;
 }
 
 .text-center {
