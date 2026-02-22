@@ -39,11 +39,6 @@ This project was created to gain hands-on experience with WebSockets by building
 
 ![BackChat](public/images/backchat.jpg)
 
-## 🔗 Links
-
-- [Live Demo](https://chat-app-with-socket-io-sigma.vercel.app)
-- [GitHub Repo](https://github.com/rolandjlevy/chat-app-with-socket-io)
-
 ## 🛠️ Technologies Used
 
 - Node.js, Express, JavaScript, CSS
@@ -52,13 +47,6 @@ This project was created to gain hands-on experience with WebSockets by building
 - [Emoji library](https://github.com/theraot/emoji)
 - [Open Emoji API](https://emoji-api.com/)
 - [CSS patterns](http://www.heropatterns.com)
-
-## Features 💡
-
-- Uses the [Websocket API](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) to enable bi-directional communication which characterizes live messaging
-- [Emojis dropdown menu](https://github.com/theraot/emoji) available in desktop view
-- Protection against XSS attacks like this: `<img onerror="alert('XSS attack!')>`
-- Fully responsive
 
 ## 📚 References
 
