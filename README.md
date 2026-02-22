@@ -1,52 +1,70 @@
-# BackChat 💬
+# ChatsApp 💬
 
->  A simple messaging app using socket.io
-
-## Table of contents
-* [Purpose](#purpose-)
-* [Screenshot](#screenshot-)
-* [Links](#links-)
-* [Setup](#setup-)
-* [Technologies](#technologies-)
-* [Features](#features-)
-* [Reference](#reference-)
-* [Contact](#contact-)
+A simple, real-time messaging app built with Socket.io, Node and Express.
 
 ---
 
-## Purpose 🎯
-The aim of this project was to get practical experience of websockets by building a simple messaging app.
+## 🚀 Quick Start
 
-## Screenshot 📷
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/rolandjlevy/chat-app-with-socket-io.git
+   cd chat-app-with-socket-io
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Start the server:**
+   ```bash
+   npm start
+   ```
+4. **Open your browser:**
+   Visit [http://localhost:3000](http://localhost:3000) in one or more tabs to start chatting!
+
+---
+
+## 🎯 Purpose
+
+This project was created to gain hands-on experience with WebSockets by building a simple, interactive chat application.
+
+## 💡 Features
+
+- Real-time messaging using [WebSocket API](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) and Socket.io
+- Emoji dropdown menu (desktop view)
+- XSS protection (e.g., blocks `<img onerror="alert('XSS attack!')">`)
+- Fully responsive design
+
+## 🖼️ Screenshot
+
 ![BackChat](public/images/backchat.jpg)
 
-## Links 🔗
-- [Live demo](https://chat-app-with-socket-io.rolandjlevy.repl.co/)
-- [View source code](https://replit.com/@RolandJLevy/chat-app-with-socket-io)
-- [Github repo](https://github.com/rolandjlevy/chat-app-with-socket-io)
+## 🔗 Links
 
-## Setup 🔨
-- Clone this repo `git clone https://github.com/rolandjlevy/chat-app-with-socket-io.git`
-- Download all dependencies by running `npm install`
-- Run `npm run start` to start the server
-- Open `http://localhost:3000` in a few tabs to see the chat app running
+- [Live Demo](https://chat-app-with-socket-io.rolandjlevy.repl.co/)
+- [GitHub Repo](https://github.com/rolandjlevy/chat-app-with-socket-io)
 
-## Technologies 👨‍💻
-* Node, Express, JavaScript, CSS
-* [socket.io](https://socket.io)
-* [he HTML entities encoder/decoder](https://github.com/mathiasbynens/he)
-* [Emoji library](https://github.com/theraot/emoji)
-* [CSS patterns](http://www.heropatterns.com)
+## 🛠️ Technologies Used
+
+- Node.js, Express, JavaScript, CSS
+- [Socket.io](https://socket.io)
+- [he HTML entities encoder/decoder](https://github.com/mathiasbynens/he)
+- [Emoji library](https://github.com/theraot/emoji)
+- [Open Emoji API](https://emoji-api.com/)
+- [CSS patterns](http://www.heropatterns.com)
 
 ## Features 💡
-* Uses the [Websocket API](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) to enable bi-directional communication which characterizes live messaging
-* [Emojis dropdown menu](https://github.com/theraot/emoji) available in desktop view
-* Protection against XSS attacks like this: `<img onerror="alert('XSS attack!')>`
-* Fully responsive
 
-## Reference 📙
-- This project was inpired by [NetNinja's](https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg) youtube tutorial on [Websockets](https://www.youtube.com/watch?v=vQjiN8Qgs3c)
-- How to create an [emoji dropdown](https://stackoverflow.com/questions/39871916/is-it-possible-to-generate-all-the-emojis-and-append-to-the-select-dropdown)
+- Uses the [Websocket API](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) to enable bi-directional communication which characterizes live messaging
+- [Emojis dropdown menu](https://github.com/theraot/emoji) available in desktop view
+- Protection against XSS attacks like this: `<img onerror="alert('XSS attack!')>`
+- Fully responsive
 
-## Contact 📧
-Created by [Roland](https://rolandlevy.co.uk) - feel free to contact me!
+## 📚 References
+
+- Inspired by [NetNinja's WebSockets tutorial](https://www.youtube.com/watch?v=vQjiN8Qgs3c)
+- Emoji dropdown: [StackOverflow answer](https://stackoverflow.com/questions/39871916/is-it-possible-to-generate-all-the-emojis-and-append-to-the-select-dropdown)
+
+## 📬 Contact
+
+Created by [Roland](https://rolandlevy.co.uk) — feel free to reach out!

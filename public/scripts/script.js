@@ -48,6 +48,8 @@ fetch('/api/data')
       span.textContent = e.character;
       container.appendChild(span);
     });
+  })
+  .catch((err) => console.error('Error fetching emojis:', err));
 
 let socket = io();
 
