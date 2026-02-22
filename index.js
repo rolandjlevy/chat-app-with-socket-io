@@ -6,11 +6,13 @@ const io = require('socket.io')(server);
 const path = require('path');
 const fs = require('fs');
 require('dotenv').config();
+app.use(express.static(path.join(__dirname, 'public')));
+
 const port = process.env.PORT || 3000;
 const apiKey = process.env.EMOJI_API_KEY;
-const fetch = require('node-fetch').default;
 
-app.use(express.static(path.join(__dirname, 'public')));
+// Use dynamic import for node-fetch (ESM compatibility everywhere)
+const fetch = async (...args) => (await import('node-fetch')).default(...args);
 
 const url = 'https://emoji-api.com/emojis';
 
